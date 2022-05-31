@@ -3,6 +3,7 @@ const exec = require('child_process').exec;
 function execute(command, callback){
     exec(command, function(error, stdout, stderr){ 
         console.log(command)
+        console.log("Error",error)
         callback(stdout); 
     });
 };
