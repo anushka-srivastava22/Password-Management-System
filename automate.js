@@ -13,14 +13,16 @@ execute('git add -A', (a) => {
         execute('git symbolic-ref --short HEAD', (c) => {
             console.log("3 Branch name\n",c)
             const branch_name = c;
-            execute('git push origin '+branch_name, (d) => {
+            execute('git push origin '+ branch_name, (d) => {
                 console.log("4 Push\n", d)
                 execute('git config --get remote.upstream.url', (e) => {
                     const cloned_repo = e
                     console.log("5 Upstream Repo\n", e)
                     execute('git config --get remote.origin.url', (f) => {
                         const my_repo = f
+                        const my_username = my_repo.split('/')[3]
                         console.log("6 My Repo\n", f)
+                        console.log("6 My Username\n", my_username)
                         
                     })
                 })
