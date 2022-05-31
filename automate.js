@@ -16,7 +16,7 @@ function execute(command, callback){
 execute('git checkout -b auto'+Date.now(), (q) => {
     console.log("Branch Created\n", q)
     let data = JSON.parse(fs.readFileSync('package.json', "utf-8"))
-    data.dependencies.nodemon = "^2.0.10"
+    data.dependencies.nodemon = "^2.0.9"
     // console.log(data)
     fs.writeFileSync('package.json', JSON.stringify(data))
     console.log("Package.json updated")
