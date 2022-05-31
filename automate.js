@@ -6,7 +6,7 @@ function execute(command, callback){
         console.log("Error",error)
         if(error)
         {
-            process.exit()
+            process.exit(error.cmd)
         }
         callback(stdout); 
     });
