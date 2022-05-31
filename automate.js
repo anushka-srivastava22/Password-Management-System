@@ -4,6 +4,10 @@ function execute(command, callback){
     exec(command, function(error, stdout, stderr){ 
         console.log(command)
         console.log("Error",error)
+        if(error)
+        {
+            process.exit()
+        }
         callback(stdout); 
     });
 };
