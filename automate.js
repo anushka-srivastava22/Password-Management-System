@@ -7,14 +7,23 @@ function execute(command, callback){
 };
 
 execute('git add -A', (a) => {
-    console.log("1",a)
+    console.log("1 Add\n",a)
     execute('git commit -m "Automating"', (b) => {
-        console.log("2",b)
+        console.log("2 Commit\n",b)
         execute('git symbolic-ref --short HEAD', (c) => {
-            console.log("3",c)
-            execute('git push origin '+c, (d) => {
-                console.log("4", d)
-
+            console.log("3 Branch name\n",c)
+            const branch_name = c;
+            execute('git push origin '+branch_name, (d) => {
+                console.log("4 Push\n", d)
+                execute('git config --get remote.upstream.url - UPSTREAM', (e) => {
+                    const cloned_repo = e
+                    console.log("5 Upstream Repo\n", e)
+                    execute('git config --get remote.upstream.url - UPSTREAM', (f) => {
+                        const my_repo = f
+                        console.log("5 My Repo\n", f)
+                        
+                    })
+                })
             })
         })
     })
