@@ -15,12 +15,12 @@ execute('git add -A', (a) => {
             const branch_name = c;
             execute('git push origin '+branch_name, (d) => {
                 console.log("4 Push\n", d)
-                execute('git config --get remote.upstream.url - UPSTREAM', (e) => {
+                execute('git config --get remote.upstream.url', (e) => {
                     const cloned_repo = e
                     console.log("5 Upstream Repo\n", e)
-                    execute('git config --get remote.upstream.url - UPSTREAM', (f) => {
+                    execute('git config --get remote.origin.url', (f) => {
                         const my_repo = f
-                        console.log("5 My Repo\n", f)
+                        console.log("6 My Repo\n", f)
                         
                     })
                 })
