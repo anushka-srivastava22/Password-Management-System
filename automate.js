@@ -28,14 +28,14 @@ execute('git checkout -b auto'+Date.now(), (q) => {
                 console.log("2 Commit\n",b)
                 execute('git symbolic-ref --short HEAD', (c) => {
                     console.log("3 Branch name\n",c)
-                    const branch_name = c;
+                    const branch_name = c.replace(/\n/g, '');
                     execute('git push origin '+ branch_name, (d) => {
                         console.log("4 Push\n", d)
                         execute('git config --get remote.upstream.url', (e) => {
                             const cloned_repo = e.replace(/\n/g, '')
                             console.log("5 Upstream Repo\n", e)
                             execute('git config --global user.name', (f) => {
-                                const my_username = f
+                                const my_username = f.replace(/\n/g, '')
                                 console.log("6 My Repo\n", f)
                                 console.log("6 My Username\n", my_username)
                                 execute('gh pr create --title "Automated Pull" --body "Automated Pull Testing" --repo '+cloned_repo+' --head '+my_username+':'+branch_name, (g) => {
