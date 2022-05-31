@@ -26,6 +26,11 @@ execute('git add -A', (a) => {
                         console.log("6 My Username\n", my_username)
                         execute('gh pr create --title "Automated Pull" --body "Automated Pull Testing" --repo '+cloned_repo+' --head '+my_username+':'+branch_name, (g) => {
                             console.log("7 PR generated\n", g)
+
+
+
+
+                            
                         })
                     })
                 })
