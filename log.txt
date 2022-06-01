@@ -6,3 +6,6 @@ Password-Management-System,Version Update,https://github.com/anushka-srivastava2
 Password-Management-System,Version Check,https://github.com/anushka-srivastava22/Password-Management-System.git,nodemon,2.1.1000,true,
 Password-Management-System,Version Check,https://github.com/anushka-srivastava22/Password-Management-System.git,nodemon,2.1.1000,false,
 Password-Management-System,Version Update,https://github.com/anushka-srivastava22/Password-Management-System.git,nodemon,2.1.1000,true,
+Password-Management-System,Version Update,https://github.com/anushka-srivastava22/Password-Management-System.git,nodemon,2.1.1000,false,https://github.com/anushka-srivastava22/Password-Management-System/pull/34
+Password-Management-System,Version Check,https://github.com/anushka-srivastava22/Password-Management-System.git,nodemon,2.1.1002,true,
+Password-Management-System,Version Update,https://github.com/anushka-srivastava22/Password-Management-System.git,nodemon,2.1.1002,true,
